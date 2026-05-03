@@ -1,0 +1,4 @@
+Building[name=Campus Biblioteca, electricity=12000,00 kWh, gas=900,00 m3] -> 6600,00 kg CO2e/year
+Car[brand=Toyota, model=Corolla, annualKm=15000,00, efficiency=14,00 km/L] -> 2475,00 kg CO2e/year
+Bicycle[brand=GW, type=Montana, annualKm=1800,00, electric=false] -> 0,00 kg CO2e/year
+Bicycle[brand=Specialized, type=Urbana, annualKm=2200,00, electric=true] -> 8,80 kg CO2e/year
