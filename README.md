@@ -82,8 +82,34 @@ Comandos de verificacion sugeridos:
 
 ## Evidencias
 
-1. Estructura de carpetas del proyecto.
-2. Ejecucion de `mvn test` con pruebas en verde.
-3. Ejecucion de `mvn exec:java` mostrando resultados en consola.
-4. Contenido de `data/carbon_footprint_results.txt`.
-5. Salida de `git branch`, `git branch -a` y `git status` en `dev_ltuiran07`.
+### Evidencia 1 - Git
+![Evidencia Git](evidencias/01%20Git.jpg)
+
+### Evidencia 2 - Estructura del proyecto
+![Estructura del proyecto](evidencias/02%20Estructura%20del%20proyecto.jpg)
+
+### Evidencia 3 - Compilacion e instalacion
+![Compilacion e instalacion](evidencias/03%20Compilacion%20e%20instalaci%C3%B3n.jpg)
+
+### Evidencia 4 - Pruebas unitarias
+![Pruebas unitarias](evidencias/04%20Pruebas%20unitarias.jpg)
+
+### Evidencia 5 - Ejecucion del programa
+![Ejecucion del programa](evidencias/05%20Ejecuci%C3%B3n%20Programa.jpg)
+
+### Evidencia 6 - Archivo generado
+![Archivo generado](evidencias/06%20Archivo%20generado.jpg)
+
+### Evidencia 7 - Codigo fuente clave
+![Interfaz CarbonFootprint](evidencias/07-1%20Interfaz.jpg)
+![Clase Building](evidencias/07-2%20Building.jpg)
+![Clase Car](evidencias/07-3%20Car.jpg)
+![Clase Bicycle convencional](evidencias/07-4%20Bicycle-0.jpg)
+![Clase Bicycle electrica](evidencias/07-4%20Bicycle-1.jpg)
+![Main y polimorfismo](evidencias/07-5%20Main_Polimorfismo.jpg)
+![File manager](evidencias/07-6%20FileManageer.jpg)
+
+### Evidencia 8 - Documentacion
+![README](evidencias/08-1%20Documentacion_readme.jpg)
+![Analisis de diseno](evidencias/08-2%20Analisis_diseno.jpg)
+![Guia de video](evidencias/08-3%20Guia_video.jpg)
