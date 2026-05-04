@@ -6,10 +6,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.List;
+import java.util.Objects;
 
 public class CarbonFootprintFileManager {
 
     public void saveResults(List<CarbonFootprint> items, Path outputPath) {
+        Objects.requireNonNull(items, "items must not be null");
+        Objects.requireNonNull(outputPath, "outputPath must not be null");
+
         try {
             Path parent = outputPath.getParent();
             if (parent != null) {
@@ -29,7 +33,7 @@ public class CarbonFootprintFileManager {
                 }
             }
         } catch (IOException exception) {
-            System.err.println("Error while saving carbon footprint file: " + exception.getMessage());
+            throw new IllegalStateException("Error while saving carbon footprint file", exception);
         }
     }
 }

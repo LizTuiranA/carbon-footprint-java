@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CarbonFootprintFileManagerTest {
@@ -35,6 +36,14 @@ class CarbonFootprintFileManagerTest {
         String content = Files.readString(tempFile);
         assertTrue(!content.isBlank());
         deleteFile(tempFile);
+    }
+
+    @Test
+    void shouldRejectNullItems() {
+        CarbonFootprintFileManager fileManager = new CarbonFootprintFileManager();
+
+        assertThrows(NullPointerException.class,
+                () -> fileManager.saveResults(null, Path.of("data", "test.txt")));
     }
 
     private void deleteFile(Path file) {

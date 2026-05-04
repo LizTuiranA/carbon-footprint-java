@@ -3,6 +3,7 @@ package edu.unisalle.carbon;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class BicycleTest {
 
@@ -19,5 +20,11 @@ class BicycleTest {
         double expected = (3000 * 0.01) * 0.4;
 
         assertEquals(expected, bicycle.getCarbonFootprint(), 0.0001);
+    }
+
+    @Test
+    void shouldRejectNegativeAnnualKilometers() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Bicycle("Trek", "Ruta", -100, false));
     }
 }

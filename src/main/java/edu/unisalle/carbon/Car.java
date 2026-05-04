@@ -7,6 +7,15 @@ public class Car implements CarbonFootprint {
     private final double fuelEfficiencyKmPerLiter;
 
     public Car(String brand, String model, double annualKilometers, double fuelEfficiencyKmPerLiter) {
+        if (brand == null || brand.isBlank()) {
+            throw new IllegalArgumentException("brand must not be blank");
+        }
+        if (model == null || model.isBlank()) {
+            throw new IllegalArgumentException("model must not be blank");
+        }
+        if (annualKilometers < 0) {
+            throw new IllegalArgumentException("annualKilometers must be zero or positive");
+        }
         if (fuelEfficiencyKmPerLiter <= 0) {
             throw new IllegalArgumentException("fuelEfficiencyKmPerLiter must be greater than zero");
         }

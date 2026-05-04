@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class BuildingTest {
 
@@ -20,5 +21,11 @@ class BuildingTest {
         Building building = new Building("Edificio B", 500, 50);
 
         assertFalse(building.getDescription().isBlank());
+    }
+
+    @Test
+    void shouldRejectNegativeElectricity() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Building("Edificio C", -1, 100));
     }
 }

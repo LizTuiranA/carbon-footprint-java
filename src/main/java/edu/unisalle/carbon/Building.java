@@ -6,6 +6,15 @@ public class Building implements CarbonFootprint {
     private final double annualNaturalGasM3;
 
     public Building(String name, double annualElectricityKwh, double annualNaturalGasM3) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("name must not be blank");
+        }
+        if (annualElectricityKwh < 0) {
+            throw new IllegalArgumentException("annualElectricityKwh must be zero or positive");
+        }
+        if (annualNaturalGasM3 < 0) {
+            throw new IllegalArgumentException("annualNaturalGasM3 must be zero or positive");
+        }
         this.name = name;
         this.annualElectricityKwh = annualElectricityKwh;
         this.annualNaturalGasM3 = annualNaturalGasM3;

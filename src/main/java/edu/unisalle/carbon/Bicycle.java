@@ -7,6 +7,15 @@ public class Bicycle implements CarbonFootprint {
     private final boolean electric;
 
     public Bicycle(String brand, String type, double annualKilometers, boolean electric) {
+        if (brand == null || brand.isBlank()) {
+            throw new IllegalArgumentException("brand must not be blank");
+        }
+        if (type == null || type.isBlank()) {
+            throw new IllegalArgumentException("type must not be blank");
+        }
+        if (annualKilometers < 0) {
+            throw new IllegalArgumentException("annualKilometers must be zero or positive");
+        }
         this.brand = brand;
         this.type = type;
         this.annualKilometers = annualKilometers;

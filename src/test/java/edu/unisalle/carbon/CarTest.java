@@ -3,6 +3,7 @@ package edu.unisalle.carbon;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CarTest {
@@ -23,5 +24,11 @@ class CarTest {
 
         assertTrue(description.contains("Kia"));
         assertTrue(description.contains("Rio"));
+    }
+
+    @Test
+    void shouldRejectInvalidFuelEfficiency() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Car("Mazda", "2", 10000, 0));
     }
 }
