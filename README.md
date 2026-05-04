@@ -80,7 +80,7 @@ Comandos de verificacion sugeridos:
 - `git branch -a`
 - `git status`
 
-## Evidencias sugeridas para pantallazos
+## Evidencias
 
 1. Estructura de carpetas del proyecto.
 2. Ejecucion de `mvn test` con pruebas en verde.
